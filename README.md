@@ -41,6 +41,8 @@ ros2 launch urdf_seminar crane_plus_rviz.launch.py
 # Press [Ctrl-c] to terminate.
 ```
 
+joint_state_publisher_guiのスライドバーを動かすと各関節の動作を確認できます。
+
 ### Gazeboの起動
 
 ```sh
@@ -48,7 +50,10 @@ ros2 launch urdf_seminar crane_plus_rviz.launch.py
 source ~/ros2_ws/install/setup.bash
 ros2 launch urdf_seminar crane_plus_gazebo.launch.py
 # Press [Ctrl-c] to terminate.
+```
 
+次のコマンドを実行すると各関節の角度を指定できます。
+```
 # 2つ目のターミナル
 ros2 topic pub -1 /crane_plus_arm_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.5,0.5,0.5,0.5]}"
 ```
