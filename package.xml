@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>urdf_seminar</name>
+  <version>1.0.0</version>
+  <description>URDF Seminar package</description>
+  <maintainer email="shop@rt-net.jp">RT Corporation</maintainer>
+  <license>Apache License 2.0</license>
+
+  <author email="yusuke.kato@rt-net.jp">Yusuke Kato</author>
+
+  <depend>launch</depend>
+  <depend>rviz2</depend>
+  <depend>xacro</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>ros_gz</depend>
+  <depend>ign_ros2_control</depend>
+  <depend>ros2_controllers</depend>
+  <depend>controller_manager</depend>
+  <depend>gripper_controllers</depend>
+
+</package>
