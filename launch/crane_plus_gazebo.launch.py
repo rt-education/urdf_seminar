@@ -26,13 +26,14 @@ from launch_ros.actions import SetParameter
 def generate_launch_description():
     xacro_path = os.path.join(
         get_package_share_directory('urdf_seminar'), 'urdf', 'crane_plus.urdf.xacro')
-    xacro_data = xacro.process_file(xacro_path)
+    xacro_data = xacro.process_file(xacro_path, mappings={'use_gazebo': 'true'})
     urdf_data = xacro_data.toprettyxml(indent='  ')
 
     rsp = Node(package='robot_state_publisher',
                executable='robot_state_publisher',
                output='both',
-               parameters=[{'robot_description': urdf_data}])
+               parameters=[{'robot_description': urdf_data}]
+        )
     
     env = {'IGN_GAZEBO_SYSTEM_PLUGIN_PATH': os.environ['LD_LIBRARY_PATH'],
            'IGN_GAZEBO_RESOURCE_PATH': os.path.dirname(
@@ -58,25 +59,25 @@ def generate_launch_description():
         arguments=['-topic', '/robot_description',
                    '-name', 'crane_plus',
                    '-z', '1.015',
-                   '-allow_renaming', 'true'],
-    )
+                   '-allow_renaming', 'true']
+        )
 
     spawn_joint_state_controller = ExecuteProcess(
                 cmd=['ros2 run controller_manager spawner joint_state_broadcaster'],
                 shell=True,
-                output='screen',
+                output='screen'
             )
 
     spawn_arm_controller = ExecuteProcess(
                 cmd=['ros2 run controller_manager spawner crane_plus_arm_controller'],
                 shell=True,
-                output='screen',
+                output='screen'
             )
 
     spawn_gripper_controller = ExecuteProcess(
                 cmd=['ros2 run controller_manager spawner crane_plus_gripper_controller'],
                 shell=True,
-                output='screen',
+                output='screen'
             )
 
     bridge = Node(
