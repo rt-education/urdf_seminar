@@ -26,8 +26,8 @@ from launch_ros.actions import SetParameter
 def generate_launch_description():
     xacro_path = os.path.join(
         get_package_share_directory('urdf_seminar'), 'urdf', 'crane_plus.urdf.xacro')
-    xacro_data = xacro.process_file(xacro_path, mappings={'use_gazebo': 'true'})
-    urdf_data = xacro_data.toprettyxml(indent='  ')
+    doc = xacro.process_file(xacro_path, mappings={'use_gazebo': 'true'})
+    urdf_data = doc.toprettyxml(indent='  ')
 
     rsp = Node(package='robot_state_publisher',
                executable='robot_state_publisher',
