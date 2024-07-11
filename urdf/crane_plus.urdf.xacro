@@ -17,12 +17,12 @@
   </xacro:if>
 
   <link name="base_link"/>
-  <link name="world"/>                                
+  <link name="world"/>
 
   <joint name="base_link_to_world_joint" type="fixed">
-    <parent link="world"/>                            
-    <child link="base_link"/>                         
-  </joint>                                            
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
 
   <xacro:property name="NAME_LINK_BASE" value="crane_plus_base"/>
   <xacro:property name="NAME_LINK_1" value="crane_plus_link1"/>
@@ -91,7 +91,7 @@
       name_link_4="${NAME_LINK_4}"
       name_link_hand="${NAME_LINK_HAND}" />
 
-    <xacro:crane_plus_gazebo_ros2_control_settings 
+    <xacro:crane_plus_gazebo_ros2_control_settings
       name="crane_plus"
       name_joint_1="${NAME_JOINT_1}"
       name_joint_2="${NAME_JOINT_2}"

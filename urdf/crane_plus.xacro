@@ -63,10 +63,10 @@
               *origin">
 
     <joint name="${name_joint_base}" type="fixed">
-      <xacro:insert_block name="origin"/>         
-      <parent link="${parent}"/>                  
-      <child link="${name_link_base}"/>           
-    </joint>                                      
+      <xacro:insert_block name="origin"/>
+      <parent link="${parent}"/>
+      <child link="${name_link_base}"/>
+    </joint>
 
     <link name="${name_link_base}">
       <visual>
