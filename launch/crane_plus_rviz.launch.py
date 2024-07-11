@@ -30,13 +30,11 @@ def generate_launch_description():
     rsp = Node(package='robot_state_publisher',
                executable='robot_state_publisher',
                output='both',
-               parameters=[{'robot_description': urdf_data}]
-        )
-    
+               parameters=[{'robot_description': urdf_data}])
+
     jsp = Node(package='joint_state_publisher_gui',
                executable='joint_state_publisher_gui',
-               output='screen'
-        )
+               output='screen')
 
     rviz_config = get_package_share_directory(
         'urdf_seminar') + '/config/crane_plus.rviz'
@@ -45,9 +43,8 @@ def generate_launch_description():
                      executable='rviz2',
                      name='rviz2',
                      output='log',
-                     arguments=['-d', rviz_config]
-        )
-    
+                     arguments=['-d', rviz_config])
+
     return LaunchDescription([
         rsp,
         jsp,
