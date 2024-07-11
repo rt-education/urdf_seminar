@@ -53,7 +53,7 @@ ros2 launch urdf_seminar crane_plus_gazebo.launch.py
 ```
 
 次のコマンドを実行すると各関節の角度を指定できます。
-```
+```sh
 # 2つ目のターミナル
 ros2 topic pub -1 /crane_plus_arm_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.5,0.5,0.5,0.5]}"
 ```
