@@ -11,8 +11,8 @@
     <xacro:include filename="$(find urdf_seminar)/urdf/crane_plus.gazebo_ros2_control.xacro"/>
   </xacro:if>
 
-  <link name="base_link"/>
   <link name="world"/>
+  <link name="base_link"/>
 
   <joint name="base_link_to_world_joint" type="fixed">
     <parent link="world"/>
