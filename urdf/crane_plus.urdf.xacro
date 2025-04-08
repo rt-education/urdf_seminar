@@ -35,6 +35,7 @@
 
   <xacro:property name="M_PI" value="3.14159"/>
   <xacro:property name="SERVO_HOME" value="${radians(150.0)}"/>
+  <xacro:property name="JOINT_EFFORT_LIMIT" value="1.5"/>
   <xacro:property name="JOINT_VELOCITY_LIMIT" value="2.0"/>
   <xacro:property name="JOINT_1_LOWER_LIMIT" value="${radians(0) - SERVO_HOME}"/>
   <xacro:property name="JOINT_1_UPPER_LIMIT" value="${radians(300) - SERVO_HOME}"/>
@@ -62,6 +63,7 @@
     name_joint_4="${NAME_JOINT_4}"
     name_joint_hand="${NAME_JOINT_HAND}"
 
+    joints_elimit="${JOINT_EFFORT_LIMIT}"
     joints_vlimit="${JOINT_VELOCITY_LIMIT}"
     joint_1_lower_limit="${JOINT_1_LOWER_LIMIT}"
     joint_1_upper_limit="${JOINT_1_UPPER_LIMIT}"
