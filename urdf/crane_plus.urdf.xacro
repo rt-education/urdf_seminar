@@ -36,16 +36,16 @@
   <xacro:property name="M_PI" value="3.14159"/>
   <xacro:property name="SERVO_HOME" value="${radians(150.0)}"/>
   <xacro:property name="JOINT_VELOCITY_LIMIT" value="2.0"/>
-  <xacro:property name="JOINT_1_LOWER_LIMIT" value="${radians(0.0) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_1_UPPER_LIMIT" value="${radians(300.0) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_2_LOWER_LIMIT" value="${radians(45.45) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_2_UPPER_LIMIT" value="${radians(252.20) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_3_LOWER_LIMIT" value="${radians(3.52) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_3_UPPER_LIMIT" value="${radians(290.62) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_4_LOWER_LIMIT" value="${radians(44.57) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_4_UPPER_LIMIT" value="${radians(251.32) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_HAND_LOWER_LIMIT" value="${radians(109.38) - SERVO_HOME}"/>
-  <xacro:property name="JOINT_HAND_UPPER_LIMIT" value="${radians(188.27) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_1_LOWER_LIMIT" value="${radians(0) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_1_UPPER_LIMIT" value="${radians(300) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_2_LOWER_LIMIT" value="${radians(46) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_2_UPPER_LIMIT" value="${radians(252) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_3_LOWER_LIMIT" value="${radians(4) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_3_UPPER_LIMIT" value="${radians(290) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_4_LOWER_LIMIT" value="${radians(45) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_4_UPPER_LIMIT" value="${radians(251) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_HAND_LOWER_LIMIT" value="${radians(110) - SERVO_HOME}"/>
+  <xacro:property name="JOINT_HAND_UPPER_LIMIT" value="${radians(188) - SERVO_HOME}"/>
 
   <xacro:crane_plus
     parent="base_link"
