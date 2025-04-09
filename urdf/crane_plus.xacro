@@ -51,8 +51,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/visual/body_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/visual/body_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="black"/>
       </visual>
@@ -60,8 +59,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/collision/body_collision_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/collision/body_collision_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="black"/>
       </collision>
@@ -91,8 +89,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/visual/Link1_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/visual/Link1_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="white"/>
       </visual>
@@ -100,8 +97,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/collision/Link1_collision_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/collision/Link1_collision_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="white"/>
       </collision>
@@ -131,8 +127,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${M_PI/2} 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/visual/Link2_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/visual/Link2_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="black"/>
       </visual>
@@ -140,8 +135,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="${M_PI/2} 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/collision/Link2_collision_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/collision/Link2_collision_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="black"/>
       </collision>
@@ -171,8 +165,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${M_PI/2} 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/visual/Link3_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/visual/Link3_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="white"/>
       </visual>
@@ -180,8 +173,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="${M_PI/2} 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/collision/Link3_collision_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/collision/Link3_collision_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="white"/>
       </collision>
@@ -211,8 +203,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${M_PI/2} 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/visual/Link4_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/visual/Link4_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="black"/>
       </visual>
@@ -220,8 +211,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="${M_PI/2} 0 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/collision/Link4_collision_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/collision/Link4_collision_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="black"/>
       </collision>
@@ -251,8 +241,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 -${M_PI/2} 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/visual/Hand_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/visual/Hand_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="white"/>
       </visual>
@@ -260,8 +249,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 -${M_PI/2} 0"/>
         <geometry>
-          <mesh filename="package://urdf_seminar/meshes/collision/Hand_collision_20201013.stl"
-              scale="1 1 1"/>
+          <mesh filename="package://urdf_seminar/meshes/collision/Hand_collision_20201013.stl" scale="1 1 1"/>
         </geometry>
         <material name="white"/>
       </collision>
