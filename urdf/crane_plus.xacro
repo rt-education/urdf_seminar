@@ -9,6 +9,10 @@
     <color rgba="0.95 0.95 0.95 1.0"/>
   </material>
 
+  <xacro:property name="dynamics">
+    <dynamics damping="1.00E-06" friction="0.2"/>
+  </xacro:property>
+
   <xacro:macro name="crane_plus"
       params="parent
               name_link_base
@@ -80,7 +84,7 @@
         />
       <parent link="${name_link_base}"/>
       <child link="${name_link_1}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <xacro:insert_block name="dynamics"/>
     </joint>
 
     <link name="${name_link_1}">
@@ -120,7 +124,7 @@
         />
       <parent link="${name_link_1}"/>
       <child link="${name_link_2}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <xacro:insert_block name="dynamics"/>
     </joint>
 
     <link name="${name_link_2}">
@@ -160,7 +164,7 @@
         />
       <parent link="${name_link_2}"/>
       <child link="${name_link_3}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <xacro:insert_block name="dynamics"/>
     </joint>
 
     <link name="${name_link_3}">
@@ -200,7 +204,7 @@
         />
       <parent link="${name_link_3}"/>
       <child link="${name_link_4}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <xacro:insert_block name="dynamics"/>
     </joint>
 
     <link name="${name_link_4}">
@@ -240,7 +244,7 @@
         />
       <parent link="${name_link_4}"/>
       <child link="${name_link_hand}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <xacro:insert_block name="dynamics"/>
     </joint>
 
     <link name="${name_link_hand}">
