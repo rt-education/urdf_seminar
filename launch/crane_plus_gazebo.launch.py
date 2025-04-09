@@ -29,14 +29,15 @@ def generate_launch_description():
     doc = xacro.process_file(xacro_path, mappings={'use_gazebo': 'true'})
     urdf_data = doc.toprettyxml(indent='  ')
 
-    rsp = Node(package='robot_state_publisher',
-               executable='robot_state_publisher',
-               output='both',
-               parameters=[{'robot_description': urdf_data}])
+    rsp = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        output='both',
+        parameters=[{'robot_description': urdf_data}])
 
     env = {'IGN_GAZEBO_SYSTEM_PLUGIN_PATH': os.environ['LD_LIBRARY_PATH'],
            'IGN_GAZEBO_RESOURCE_PATH': os.path.dirname(
-               get_package_share_directory('urdf_seminar'))}
+                get_package_share_directory('urdf_seminar'))}
 
     world_file = os.path.join(
         get_package_share_directory('urdf_seminar'), 'worlds', 'table.sdf')
@@ -45,10 +46,10 @@ def generate_launch_description():
         get_package_share_directory('urdf_seminar'), 'config', 'gui.config')
 
     ign_gazebo = ExecuteProcess(
-            cmd=['ign gazebo -r', world_file, '--gui-config', gui_config],
-            output='screen',
-            additional_env=env,
-            shell=True)
+        cmd=['ign gazebo -r', world_file, '--gui-config', gui_config],
+        output='screen',
+        additional_env=env,
+        shell=True)
 
     gazebo_spawn_entity = Node(
         package='ros_gz_sim',
@@ -78,10 +79,10 @@ def generate_launch_description():
         arguments=["crane_plus_gripper_controller"])
 
     bridge = Node(
-                package='ros_gz_bridge',
-                executable='parameter_bridge',
-                arguments=['/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock'],
-                output='screen')
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        output='screen',
+        arguments=['/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock'])
 
     return LaunchDescription([
         SetParameter(name='use_sim_time', value=True),
