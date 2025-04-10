@@ -78,7 +78,7 @@
         />
       <parent link="${name_link_base}"/>
       <child link="${name_link_1}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <dynamics damping="1.0E-06" friction="0.2"/>
     </joint>
 
     <link name="${name_link_1}">
@@ -116,7 +116,7 @@
         />
       <parent link="${name_link_1}"/>
       <child link="${name_link_2}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <dynamics damping="1.0E-06" friction="0.2"/>
     </joint>
 
     <link name="${name_link_2}">
@@ -154,7 +154,7 @@
         />
       <parent link="${name_link_2}"/>
       <child link="${name_link_3}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <dynamics damping="1.0E-06" friction="0.2"/>
     </joint>
 
     <link name="${name_link_3}">
@@ -192,7 +192,7 @@
         />
       <parent link="${name_link_3}"/>
       <child link="${name_link_4}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <dynamics damping="1.0E-06" friction="0.2"/>
     </joint>
 
     <link name="${name_link_4}">
@@ -230,7 +230,7 @@
         />
       <parent link="${name_link_4}"/>
       <child link="${name_link_hand}"/>
-      <dynamics damping="1.0e-6" friction="2.0e-1"/>
+      <dynamics damping="1.0E-06" friction="0.2"/>
     </joint>
 
     <link name="${name_link_hand}">
